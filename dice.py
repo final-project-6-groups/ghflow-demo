@@ -7,6 +7,7 @@ def roll_dice():
         result = rd.randint(1, 6)
         if result == 1:
             print("You rolled a 1! Game over.")
+            value = 0
             return value
         print("The number on the dice is:", result)
         count += 1
