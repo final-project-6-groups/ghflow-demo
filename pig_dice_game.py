@@ -1,7 +1,23 @@
 import random
 
 def roll_dice(score):
-    pass
+    dice = random.randint(1, 6)
+    if dice == 1:
+        print('You rolled a 1! You lose your turn.')
+        return 0
+    else:
+        score += dice
+        print(f'You rolled a {dice}.')
+        print(f'Now your score is: {score}')
+
+    behavior = input('Press "r" to roll the dice or "h" to hold: ')
+    if behavior == 'r':
+        return roll_dice(score)
+    elif behavior == 'h':
+        return score
+    else:
+        print('Invalid input. Please try again.')
+        return roll_dice(score)
 
 def play_game():
     pass
