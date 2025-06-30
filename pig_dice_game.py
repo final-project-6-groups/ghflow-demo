@@ -19,8 +19,25 @@ def roll_dice(score):
         print('Invalid input. Please try again.')
         return roll_dice(score)
 
+
 def play_game():
-    pass
+    global count
+    global A_score, B_score
+
+    score = 0
+    if count % 2 == 0:
+        print('Player A\'s turn')
+        A_score += roll_dice(score)
+    else:
+        print('Player B\'s turn')
+        B_score += roll_dice(score)
+    count += 1
+
+    if A_score >= 100:
+        print('Player A wins!')
+    elif B_score >= 100:
+        print('Player B wins!')
+
 
 if __name__ == '__main__':
     print(' ### Welcome to the Pig Dice Game! ### ')
