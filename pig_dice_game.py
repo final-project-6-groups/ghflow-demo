@@ -23,6 +23,7 @@ def roll_dice(score):
 def play_game():
     global count
     global A_score, B_score
+    global status
 
     score = 0
     if count % 2 == 0:
@@ -38,13 +39,12 @@ def play_game():
     elif B_score >= 100:
         print('Player B wins!')
 
-
 if __name__ == '__main__':
     print(' ### Welcome to the Pig Dice Game! ### ')
     print('Let\'s play this!\n')
 
     A_score = 0; B_score = 0; count = 0
-    While True:
+    while True:
         play_game()
         if A_score > 100 or B_score >= 100:
             break
